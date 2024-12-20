@@ -49,7 +49,7 @@ RUN cp src/fonts/Droid_Sans_Mono/*.ttf /usr/share/fonts/
 RUN mkdir build 
 WORKDIR /opt/oiio/build
 
-RUN git checkout build_PNG
+RUN git checkout master
 
 ENV CMAKE_BUILD_PARALLEL_LEVEL=14
 RUN cmake -G Ninja .. -DOIIO_DOWNLOAD_MISSING_TESTDATA=ON -DOpenImageIO_BUILD_MISSING_DEPS=all -DINSTALL_FONTS=ON
